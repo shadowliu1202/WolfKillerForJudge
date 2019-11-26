@@ -1,4 +1,4 @@
-package com.higgstar.wolfkillerforjudge.ui.main
+package com.higgstar.wolfkillerforjudge.presetation.main
 
 import androidx.lifecycle.ViewModel
 

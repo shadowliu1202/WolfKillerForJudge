@@ -14,4 +14,11 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="init_player_count">總共遊玩人數</string>
+    <string name="init_good_side">正義聯盟</string>
+    <string name="role_village">村民</string>
+    <string name="role_witch">女巫</string>
+    <string name="role_prophet">預言家</string>
+    <string name="role_hunter">獵人</string>
+    <string name="role_knight">騎士</string>
 </resources>

@@ -2,7 +2,7 @@ package com.higgstar.wolfkillerforjudge
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.higgstar.wolfkillerforjudge.ui.main.MainFragment
+import com.higgstar.wolfkillerforjudge.presetation.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
