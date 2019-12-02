@@ -21,4 +21,7 @@
     <string name="role_prophet">預言家</string>
     <string name="role_hunter">獵人</string>
     <string name="role_knight">騎士</string>
+    <string name="role_werewolf">狼人</string>
+    <string name="role_wolf_king">狼王</string>
+    <string name="role_idoit">白癡</string>
 </resources>
