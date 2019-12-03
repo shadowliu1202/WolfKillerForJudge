@@ -66,41 +66,41 @@
                     android:text="@string/role_village" />
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/sp_villige"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:entries="@array/village_amount"
+                    android:entries="@array/normal_role_amount"
                     android:gravity="end" />
 
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/cb_witch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/role_witch" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/cb_prophet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/role_prophet" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/cb_hunter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/role_hunter" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/cb_knight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/role_knight" />
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/cb_idoit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/role_idoit" />
@@ -148,7 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:entries="@array/village_amount"
+                    android:entries="@array/normal_role_amount"
                     android:gravity="end" />
 
             </LinearLayout>
@@ -164,7 +164,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_start"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

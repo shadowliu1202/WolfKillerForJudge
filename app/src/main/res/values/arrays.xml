@@ -7,7 +7,7 @@
         <item>12</item>
     </string-array>
 
-    <string-array name="village_amount">
+    <string-array name="normal_role_amount">
         <item>3</item>
         <item>4</item>
         <item>5</item>
