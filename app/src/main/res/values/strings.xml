@@ -24,4 +24,5 @@
     <string name="role_werewolf">狼人</string>
     <string name="role_wolf_king">狼王</string>
     <string name="role_idoit">白癡</string>
+    <string name="common_day_break">天亮請睜眼</string>
 </resources>

@@ -6,12 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 
 import com.higgstar.wolfkillerforjudge.R
 import com.higgstar.wolfkillerforjudge.domain.model.role.PlayRole
-import kotlinx.android.synthetic.main.game_fragment.*
+import io.reactivex.disposables.Disposable
 
+@Suppress("UNCHECKED_CAST")
 class GameFragment : Fragment() {
+    private lateinit var disposable: Disposable
 
     companion object {
         fun newInstance(initRole: MutableList<PlayRole>): GameFragment {
@@ -32,8 +36,18 @@ class GameFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        tv_message.text = initRole.joinToString { it.name }
+        viewModel = ViewModelProviders.of(this, object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                return GameViewModel(initRole) as T
+            }
+        }).get(GameViewModel::class.java)
+        disposable = viewModel.start().subscribe {
+
+        }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        disposable.dispose()
+    }
 }
