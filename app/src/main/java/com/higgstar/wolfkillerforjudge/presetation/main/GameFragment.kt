@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.higgstar.wolfkillerforjudge.R
 import com.higgstar.wolfkillerforjudge.domain.model.role.PlayRole
 import io.reactivex.disposables.Disposable
+import kotlinx.android.synthetic.main.game_fragment.*
 
 @Suppress("UNCHECKED_CAST")
 class GameFragment : Fragment() {
@@ -38,11 +39,21 @@ class GameFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return GameViewModel(initRole) as T
+                return GameViewModel() as T
             }
         }).get(GameViewModel::class.java)
-        disposable = viewModel.start().subscribe {
-
+        disposable = viewModel.start(emptyList()).subscribe({ println(it) }, {})
+        btn_seat_1.setOnClickListener {
+            viewModel.initNight.onNext("test1")
+        }
+        btn_seat_2.setOnClickListener {
+            viewModel.initDay.onNext("test2")
+        }
+        btn_seat_3.setOnClickListener {
+            viewModel.secondNight.onNext("test3")
+        }
+        btn_seat_4.setOnClickListener {
+            viewModel.secondDay.onNext("test4")
         }
     }
 
